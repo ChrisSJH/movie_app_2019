@@ -76,4 +76,5 @@ React JS Fundamentals Course (2019 Update!)
 # in index.js, reactDom render(creates/get) component App() {function App()} from App.js (by import App from ./App) and put the function into index.html where id = root
 # in App.js, it has a componet App as a function App() and the functon returns html which is hello
 # compoent is the function that returns html
+# JSX
  
