@@ -70,3 +70,10 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 # MOvie App 2019
 
 React JS Fundamentals Course (2019 Update!)
+
+
+# on website, inspection, the html code is shown.###index.html
+# in index.js, reactDom render(creates/get) component App() {function App()} from App.js (by import App from ./App) and put the function into index.html where id = root
+# in App.js, it has a componet App as a function App() and the functon returns html which is hello
+# compoent is the function that returns html
+ 
