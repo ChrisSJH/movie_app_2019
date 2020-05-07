@@ -31,11 +31,13 @@ class App extends React.Component{
   };
   add = () => {
     //this.state.count += 1;
-    this.setState({count: +1 });
+    //this.setState({count: this.state.count + 1 });
+    this.setState(curr => ({count: curr.count + 1}));
     //console.log("add");
   }
   minus = () => {
-    this.setState({count:-1 });
+    //this.setState({count:this.state.count -1 });
+    this.setState(curr=> ({count: curr.count - 1}));
     //console.log("minus");
   }
   render(){
