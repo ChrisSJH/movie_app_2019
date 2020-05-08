@@ -1,29 +1,5 @@
 import React from 'react';
-import PropTypes from "prop-types";
-
-function Food({ name ,picture, rating }){
-  //console.log(props);
-return <div>
-  <h2>I like {name}</h2>
-  <img src={picture} alt={name} />
-  </div>;
-}
-Food.propTypes = {
-  name: PropTypes.string.isRequired,
-  picture: PropTypes.string.isRequired,
-  rating: PropTypes.number.isRequired
-}
-/*
-function App() {
-  return (
-    <div>
-      {/*hello}
-      {/*<h1>Hello!!!!!</h1>}
-      {foodILike.map(dish => <Food  key={dish.id} name={dish.name} picture={dish.image} rating={dish.rating}/>)}
-      {/*foodILike.map(renderFood)}
-      </div>
-  );
-}*/
+// import PropTypes from "prop-types";
 
 class App extends React.Component{
   constructor(props){
@@ -31,34 +7,17 @@ class App extends React.Component{
     console.log("hello");
   }
   state = {
-    count: 0
+    isLoading: true,
+    movies: []
   };
-  add = () => {
-    //this.state.count += 1;
-    //this.setState({count: this.state.count + 1 });
-    this.setState(curr => ({count: curr.count + 1}));
-    //console.log("add");
-  }
-  minus = () => {
-    //this.setState({count:this.state.count -1 });
-    this.setState(curr=> ({count: curr.count - 1}));
-    //console.log("minus");
-  }
   componentDidMount(){
-    console.log("component rendered");
-  }
-  componentDidUpdate(){
-    console.log("component did update");
+    setTimeout(() => {
+      this.setState({isLoading: false });
+    }, 6000);
   }
   render(){
-    console.log("I am rendering");
-    return (
-    <div>
-      <h1>The number is {this.state.count}</h1>
-      <button onClick={this.add}>Add</button>
-      <button onClick={this.minus}>Minus</button>
-    </div>
-    )
+    const { isLoading } = this.state;
+    return (<div>{isLoading ? "Loading..." : "We are ready"}</div>)
     
   };
 }
